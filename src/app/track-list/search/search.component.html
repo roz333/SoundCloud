@@ -1,0 +1,9 @@
+<input #trackNameInput type="text" name="trackNAme" alt="track cover" tabindex="-1" (focus)="onFocusMethod($event.target)">
+<label class="goButton" [for]="'myInput'" (click)="searchTrack(trackNameInput.value);inputValueChanges(trackNameInput.value)">GO</label>
+
+<div class="tracksHistory">
+  <div class="title">Search History :</div>
+  <ul>
+    <li *ngFor="let item of tracksHistory ; index as i; trackBy: trackByFn"  [ngClass]="{'itemClicked' : linkIndex === i && clicked }" (click)="searchTrack(item); clickedLink(i)">{{item}}</li>
+  </ul>
+</div>

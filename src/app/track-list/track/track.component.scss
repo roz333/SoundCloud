@@ -1,0 +1,12 @@
+
+.track_ResultLine{
+    word-wrap: break-word;
+    padding: 10px;
+    cursor: pointer;
+    &:hover{
+        background: #dddfe2;
+        span{
+            color: #3d8e38;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<div class="trackListContainer">
+  <div class="searchContainer">
+    <app-search (notifyTrackInput)='searchTrack($event)'></app-search>
+    <div *ngFor="let currentTrack of tracks ; index as i">
+      <app-track *ngIf="i >= startshownTrack && i < endshownTrack " [currentTrack]='currentTrack' (notifyClickedTrack)='imageContainer($event)'></app-track>
+    </div>
+    <div (click)="nextTracks()">NEXT</div>
+    <div (click)="prevTracks()">Prev</div>
+  </div>
+
+  <div class="imageContainer" *ngIf="this.flagTrackClicked">
+    <app-track-cover [currentClickedTrack]='currentClickedTrack'></app-track-cover>
+  </div>
+</div>

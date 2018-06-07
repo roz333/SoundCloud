@@ -1,0 +1,22 @@
+.coverImg{
+    text-align: center;
+    img{
+     width: 250px;
+     height: 250px;
+     cursor: pointer;
+    }
+
+    .fadeInImg  {
+    animation: fadein 2s;
+    }
+
+    @keyframes fadein {
+    from {
+    opacity: 0;
+    }
+
+    to {
+     opacity: 1;
+     }
+    }
+}

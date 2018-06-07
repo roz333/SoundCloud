@@ -1,0 +1,78 @@
+%containers_search_image{
+    margin: 0px 10px;
+    padding: 20px 10px 20px 10px;
+    background-color:#87CEEB;
+    border:1px solid #000000;
+    min-height: 500px;
+    border-radius: 2px;
+}
+
+$font-family:  Arial, Helvetica, sans-serif;
+
+.trackListContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    font-family: $font-family;
+    font-size: 16px;
+
+    .searchContainer{
+        width: 300px;
+        @extend %containers_search_image;
+        position: relative;
+        padding-bottom:80px; 
+        
+        .searchInputComp{
+            margin-bottom: 25px;
+            margin-right: 5px;
+        }
+
+        .controls{
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            .nextButton , .prevButton{
+                img{
+                    width: 50px;
+                    height: 25px;
+                }
+            }
+            .prevButton{
+                img{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+ 
+
+    }
+    .imageContainer{
+     flex: 1 60%;
+     @extend %containers_search_image;
+     display: flex;
+     max-width: 400px;
+     flex-direction: row;
+     justify-content: center;
+
+     .imgCoverComp{
+         flex-grow: 1;
+     }
+   }
+   .fadeout {
+    animation: fadeout 2s;
+    flex-grow: 1;
+    }
+
+    @keyframes fadeout {
+      from {
+        opacity: 1;
+        }
+
+      to {
+         opacity: 0;
+      
+    }
+
+    }
+
+}

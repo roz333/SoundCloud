@@ -10,7 +10,6 @@ import { TrackComponent } from 'src/app/track-list/track/track.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TrackSearchService } from './shared/service/trackSearchService';
 import { SafeUrlPipe } from './shared/pipes/safe-url.pipe';
-import {Ng2Webstorage} from 'ngx-webstorage';
 
 
 
@@ -27,7 +26,6 @@ import {Ng2Webstorage} from 'ngx-webstorage';
   imports: [
     BrowserModule,
     HttpClientModule,
-    Ng2Webstorage
 
    ],
   providers: [TrackSearchService],

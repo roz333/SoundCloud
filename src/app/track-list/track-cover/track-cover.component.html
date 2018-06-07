@@ -1,0 +1,6 @@
+<div class="coverImg">
+  <img [hidden]="!imageloaded" Class="fadeInImg" (click)="changeValue(true)" src={{this.currentClickedTrack.artwork_url}}>
+  <div *ngIf="playSongflag">
+    <iframe *ngIf="uri" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" [src]="uri | safeUrl"></iframe>
+  </div>
+</div>
